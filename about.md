@@ -3,8 +3,10 @@
 An accessibility input buffer for players with high-latency hardware or
 physical coordination constraints.
 
-Press the hotkey (default **F8**) to switch the assist on or off. While on,
-jump clicks that land within **1-2 physics steps** of an orb/ring timing window
+Press **F8** to switch the assist on or off. Press **F9** to cycle the
+extra-frame count 1→16; a popup shows the new value and fades after 1 second.
+While on,
+jump clicks that land within **1-16 physics steps ("extra frames")** of an orb/ring timing window
 are corrected:
 
 * **Early clicks** are held until the window opens.

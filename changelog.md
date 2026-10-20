@@ -1,5 +1,5 @@
-# v1.0.0
+# v1.1.0
 
-* Initial release.
-* Hotkey toggle with notification.
-* Early-click hold and late-click replay within a 1-2 physics step window.
+* Extra frames now range 1-16.
+* New cycle hotkey (default F9) steps the count and shows a popup that fades after 1 second.
+

@@ -7,9 +7,9 @@
 	},
 	"id": "yourname.input-quantization-assist",
 	"name": "Input Quantization Assist",
-	"version": "v1.0.0",
+	"version": "v1.1.0",
 	"developer": "YourName",
-	"description": "Accessibility input buffer: nudges jump clicks that land 1-2 physics steps off an orb/ring timing window. Toggle with a hotkey.",
+	"description": "Accessibility input buffer: corrects jump clicks that land up to 1-16 physics steps off an orb/ring timing window. Toggle and cycle the extra-frame count with hotkeys.",
 	"tags": ["gameplay", "utility"],
 	"settings": {
 		"start-enabled": {
@@ -25,13 +25,20 @@
 			"default": "F8",
 			"one-of": ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Insert", "Home", "Tab"]
 		},
+		"cycle-key": {
+			"type": "string",
+			"name": "Cycle Extra Frames Hotkey",
+			"description": "Each press adds one extra frame (1 to 16, then back to 1) and shows a popup.",
+			"default": "F9",
+			"one-of": ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Insert", "Home", "Tab"]
+		},
 		"window-frames": {
 			"type": "int",
-			"name": "Window (physics steps)",
-			"description": "How far off a timing window a click may land and still be corrected. 1 or 2 physics steps.",
+			"name": "Extra Frames",
+			"description": "How many physics steps off a timing window a click may land and still be corrected (1-16). The cycle hotkey changes this.",
 			"default": 1,
 			"min": 1,
-			"max": 2
+			"max": 16
 		},
 		"assist-early": {
 			"type": "bool",
