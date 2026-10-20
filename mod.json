@@ -1,0 +1,61 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081"
+	},
+	"id": "yourname.input-quantization-assist",
+	"name": "Input Quantization Assist",
+	"version": "v1.0.0",
+	"developer": "YourName",
+	"description": "Accessibility input buffer: nudges jump clicks that land 1-2 physics steps off an orb/ring timing window. Toggle with a hotkey.",
+	"tags": ["gameplay", "utility"],
+	"settings": {
+		"start-enabled": {
+			"type": "bool",
+			"name": "Start Enabled",
+			"description": "Turn the assist on automatically when the game launches. Useful on devices without a keyboard (the hotkey needs one).",
+			"default": false
+		},
+		"toggle-key": {
+			"type": "string",
+			"name": "Toggle Hotkey",
+			"description": "Key that switches the assist on and off.",
+			"default": "F8",
+			"one-of": ["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "Insert", "Home", "Tab"]
+		},
+		"window-frames": {
+			"type": "int",
+			"name": "Window (physics steps)",
+			"description": "How far off a timing window a click may land and still be corrected. 1 or 2 physics steps.",
+			"default": 1,
+			"min": 1,
+			"max": 2
+		},
+		"assist-early": {
+			"type": "bool",
+			"name": "Assist Early Clicks",
+			"description": "Hold a click that lands just BEFORE an orb/ring window opens until the window opens.",
+			"default": true
+		},
+		"assist-late": {
+			"type": "bool",
+			"name": "Assist Late Clicks",
+			"description": "Re-apply a click that lands just AFTER an orb/ring window closed.",
+			"default": true
+		},
+		"show-notifications": {
+			"type": "bool",
+			"name": "Show Toggle Notification",
+			"description": "Show an on-screen message when the assist is toggled.",
+			"default": true
+		},
+		"debug-log": {
+			"type": "bool",
+			"name": "Debug Logging",
+			"description": "Write a log line every time a click is adjusted.",
+			"default": false
+		}
+	}
+}
